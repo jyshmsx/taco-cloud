@@ -1,6 +1,6 @@
-package com.jysh.tacocs.data;
+package com.jysh.tacos.data;
 
-import com.jysh.tacocs.Ingredient;
+import com.jysh.tacos.Ingredient;
 
 public interface IngredientRepository {
     Iterable<Ingredient> findAll();

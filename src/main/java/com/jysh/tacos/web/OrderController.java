@@ -1,8 +1,8 @@
-package com.jysh.tacocs.web;
+package com.jysh.tacos.web;
 
 import javax.validation.Valid;
 
-import com.jysh.tacocs.data.OrderRepository;
+import com.jysh.tacos.data.OrderRepository;
 import org.springframework.validation.Errors;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jysh.tacocs.Order;
+import com.jysh.tacos.Order;
 import org.springframework.web.bind.support.SessionStatus;
 
 @Slf4j

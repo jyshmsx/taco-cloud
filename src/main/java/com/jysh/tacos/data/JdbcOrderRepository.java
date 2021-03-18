@@ -1,8 +1,8 @@
-package com.jysh.tacocs.data;
+package com.jysh.tacos.data;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jysh.tacocs.Order;
-import com.jysh.tacocs.Taco;
+import com.jysh.tacos.Order;
+import com.jysh.tacos.Taco;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
@@ -40,9 +40,23 @@ public class JdbcOrderRepository implements  OrderRepository{
 
     private long saveOrderDetails(Order order){
         @SuppressWarnings("unchecked")
+        /*Some where wrong
         Map<String, Object> values =
             objectMapper.convertValue(order, Map.class);
         values.put("placedAt", order.getPlacedAt());
+        */
+
+        Map<String,Object> values = new HashMap<>();
+        values.put("ID", order.getId());
+        values.put("PLACEDAT", order.getPlacedAt());
+        values.put("DELIVERYNAME", order.getName());
+        values.put("DELIVERYSTREET", order.getStreet());
+        values.put("DELIVERYCITY", order.getCity());
+        values.put("DELIVERYSTATE", order.getState());
+        values.put("DELIVERYZIP", order.getZip());
+        values.put("CCNUMBER", order.getCcNumber());
+        values.put("CCEXPIRATION", order.getCcExpiration());
+        values.put("CCCVV", order.getCcCVV());
 
         long orderId =
                 orderInserter

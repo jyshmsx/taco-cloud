@@ -91,7 +91,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.jysh.tacocs.TacoCloudApplication</mainClass>
+                    <mainClass>com.jysh.tacos.TacoCloudApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

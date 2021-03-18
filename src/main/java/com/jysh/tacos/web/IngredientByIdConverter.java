@@ -1,7 +1,7 @@
-package com.jysh.tacocs.web;
+package com.jysh.tacos.web;
 
-import com.jysh.tacocs.Ingredient;
-import com.jysh.tacocs.data.IngredientRepository;
+import com.jysh.tacos.Ingredient;
+import com.jysh.tacos.data.IngredientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;

@@ -1,6 +1,6 @@
-package com.jysh.tacocs.data;
+package com.jysh.tacos.data;
 
-import com.jysh.tacocs.Order;
+import com.jysh.tacos.Order;
 
 public interface OrderRepository {
     Order save(Order order);

@@ -1,4 +1,4 @@
-package com.jysh.tacocs;
+package com.jysh.tacos;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

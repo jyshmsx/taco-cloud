@@ -1,23 +1,22 @@
-package com.jysh.tacocs.web;
+package com.jysh.tacos.web;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.jysh.tacocs.Order;
-import com.jysh.tacocs.data.IngredientRepository;
-import com.jysh.tacocs.data.TacoRepository;
+import com.jysh.tacos.Order;
+import com.jysh.tacos.data.IngredientRepository;
+import com.jysh.tacos.data.TacoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 
-import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 
-import com.jysh.tacocs.Taco;
-import com.jysh.tacocs.Ingredient;
-import com.jysh.tacocs.Ingredient.Type;
+import com.jysh.tacos.Taco;
+import com.jysh.tacos.Ingredient;
+import com.jysh.tacos.Ingredient.Type;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;

@@ -1,7 +1,7 @@
-package com.jysh.tacocs.data;
+package com.jysh.tacos.data;
 
-import com.jysh.tacocs.Ingredient;
-import com.jysh.tacocs.Taco;
+import com.jysh.tacos.Ingredient;
+import com.jysh.tacos.Taco;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.PreparedStatementCreatorFactory;
@@ -33,18 +33,19 @@ public class JdbcTacoRepository implements TacoRepository{
         return taco;
     }
 
-    private long saveTacoInfo(Taco taco){
+    private long saveTacoInfo(Taco taco) {
         taco.setCreatedAt(new Date());
+        PreparedStatementCreatorFactory preparedStatementCreatorFactory = new PreparedStatementCreatorFactory(
+                "insert into Taco (name, createdAt) values (?, ?)",
+                Types.VARCHAR, Types.TIMESTAMP
+        );
+        preparedStatementCreatorFactory.setReturnGeneratedKeys(true);
         PreparedStatementCreator psc =
-                new PreparedStatementCreatorFactory(
-                        "insert into Taco (name, createdAt) values (?, ?)",
-                        Types.VARCHAR, Types.TIMESTAMP
-                ).newPreparedStatementCreator(
+                preparedStatementCreatorFactory.newPreparedStatementCreator(
                         Arrays.asList(
                                 taco.getName(),
-                                new Timestamp(taco.getCreatedAt().getTime())
-                        )
-                );
+                                new Timestamp(taco.getCreatedAt().getTime())));
+
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbc.update(psc, keyHolder);
 

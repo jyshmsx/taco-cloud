@@ -1,4 +1,4 @@
-package com.jysh.tacocs;
+package com.jysh.tacos;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

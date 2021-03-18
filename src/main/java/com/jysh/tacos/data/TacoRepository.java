@@ -1,6 +1,6 @@
-package com.jysh.tacocs.data;
+package com.jysh.tacos.data;
 
-import com.jysh.tacocs.Taco;
+import com.jysh.tacos.Taco;
 
 public interface TacoRepository {
     Taco save(Taco design);

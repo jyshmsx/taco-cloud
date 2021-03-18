@@ -1,9 +1,8 @@
-package com.jysh.tacocs.data;
+package com.jysh.tacos.data;
 
-import com.jysh.tacocs.Ingredient;
+import com.jysh.tacos.Ingredient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
